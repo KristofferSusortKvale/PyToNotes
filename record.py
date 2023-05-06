@@ -61,7 +61,8 @@ class Record:
         print('Press space to end')
 
         for _ in range(0, self.wav.getframerate() // chunk * duration):
-            self.wav.writeframes(self.stream.read(chunk))
+            self.wav.writeframes(self.stream.read(
+                chunk, exception_on_overflow=False))
 
         print('Done')
         return self.file
