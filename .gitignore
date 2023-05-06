@@ -1,4 +1,4 @@
 *.wav
 *.ly
 *.pdf
-
+__pycache__/*
